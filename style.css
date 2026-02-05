@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #cfe9ff, #e6f4ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+/* Main card */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 50px 45px;
+  max-width: 520px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1.2s ease;
+}
+
+/* Main text */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: #7a0f1c; /* deep red */
+  min-height: 90px;
+  line-height: 1.4;
+  animation: textFade 0.6s ease;
+}
+
+/* Buttons */
+button {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  padding: 12px 30px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Next button */
+#nextBtn {
+  background: linear-gradient(135deg, #7a0f1c, #a4162a);
+  color: white;
+  box-shadow: 0 10px 25px rgba(122, 15, 28, 0.35);
+}
+
+#nextBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(122, 15, 28, 0.45);
+}
+
+/* Yes / No section */
+#buttons {
+  margin-top: 25px;
+}
+
+#teaseText {
+  font-size: 18px;
+  color: #355c7d;
+  margin-bottom: 20px;
+  animation: textFade 0.4s ease;
+}
+
+/* YES button */
+#yesBtn {
+  background: linear-gradient(135deg, #7a0f1c, #b11226);
+  color: white;
+  margin-right: 15px;
+  box-shadow: 0 12px 30px rgba(122, 15, 28, 0.4);
+}
+
+#yesBtn:hover {
+  transform: scale(1.05);
+}
+
+/* NO button */
+#noBtn {
+  background: #e0ecf8;
+  color: #355c7d;
+  position: absolute;
+  box-shadow: 0 8px 20px rgba(53, 92, 125, 0.25);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#text::after {
+  content: "▍";
+  animation: blink 1s infinite;
+  margin-left: 4px;
+  color: #7a0f1c;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
